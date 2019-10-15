@@ -1,34 +1,35 @@
 import React from "react";
 import { GoMarkGithub } from "react-icons/go";
 import { FaLinkedin } from "react-icons/fa";
+import { FiChevronsUp } from "react-icons/fi";
 
 const Contact = () => {
   return (
-    <section className="contact">
-      <section className="contact-image">
-        <div className="hero">
-          <img src="./img/contact.jpg" alt="image" />
+    <section className="contact" id="contact">
+      <div className="contact-card">
+        <div className="contact-content">
           <div className="text">
             <h1>
-              <span className="hl">If you want to talk with me, </span>
+              <span className="hl">Contact Me </span>
             </h1>
-            <p>ckdrmsdk@gmail.com</p>
-            <p>
-              My Linkedin
-              <a href="#">
-                <FaLinkedin />
-              </a>
-            </p>
-            <p>
-              My Github
-              <a href="">
-                <GoMarkGithub />
-              </a>
-            </p>
+            <a href="mailto:ckdrmsdk@gmail.com">
+              <p>ckdrmsdk@gmail.com</p>
+            </a>
+
+            <a href="#">
+              <p>
+                Linkedin <FaLinkedin />
+              </p>
+            </a>
+
+            <a href="#">
+              <p>
+                Github <GoMarkGithub />
+              </p>
+            </a>
           </div>
         </div>
-      </section>
-      <div className="slider"></div>
+      </div>
     </section>
   );
 };

@@ -16,6 +16,10 @@ $hl-color: rgb(13, 122, 126);
   color: $hl-color;
 }
 
+a {
+  z-index: 3;
+}
+
 section {
   height: 100vh;
   border-bottom: 0.4px solid #000;
@@ -50,35 +54,42 @@ section {
 
 //! Main Section
 
-.main {
-  .main-image {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.main-card {
+  height: 80%;
+  box-shadow: 10px 10px 10px #eee;
+  width: 100%;
 
-    .hero {
-      height: 80%;
+  .main-content {
+    position: relative;
+    .main-image {
+      width: 100%;
+      height: 80vh;
       position: relative;
-      box-shadow: 10px 10px 10px #eee;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      &::before {
         border-radius: 60px 300px 60px;
-        border: 2px solid rgb(219, 219, 219);
+        border: 2px solid $hl-color;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url("../store/img/home3.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
         filter: brightness(70%);
       }
-      .main-text {
-        padding-left: 4rem;
-        width: 100%;
-        position: absolute;
-        top: 23%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: rgb(240, 240, 240);
-        font-size: 3.5rem;
-      }
+    }
+
+    .main-text {
+      position: absolute;
+      top: 30%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+      color: #eee;
 
       span {
         border-radius: 10px;
@@ -86,12 +97,15 @@ section {
         padding: 0.3rem;
       }
 
+      .greet {
+        margin-bottom: 1rem;
+      }
       .name {
-        margin: 1rem 0;
-        padding-left: 3rem;
+        margin-bottom: 1rem;
+        margin-left: 2rem;
       }
       .title {
-        padding-left: 6rem;
+        margin-left: 4rem;
       }
     }
   }
@@ -102,8 +116,10 @@ section {
 nav {
   height: 100vh;
   width: 100%;
-  z-index: -1;
   position: fixed;
+  &.open {
+    z-index: 9;
+  }
 }
 
 .hamburger {
@@ -135,6 +151,17 @@ nav {
   clip-path: circle(100px at 90% -20%);
   -webkit-clip-path: circle(100px at 90% -20%);
   transition: all 0.4s ease-out;
+  color: $hl-color;
+
+  .nav-item {
+    cursor: pointer;
+    font-size: 2.5rem;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      transform: translateY(-7px);
+    }
+  }
 
   &.open {
     clip-path: circle(1200px at 90% -10%);
@@ -217,8 +244,8 @@ nav {
     }
 
     .screenshot {
-      height: 100%;
-      width: 100%;
+      height: 80%;
+      width: 80%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -237,6 +264,7 @@ nav {
           transition: all 0.2s ease;
           &:hover {
             transform: translateY(-7px);
+            color: tan;
           }
         }
       }
@@ -247,8 +275,8 @@ nav {
 // Benu
 
 .img-benu {
-  width: 80%;
-  height: 60%;
+  width: 100%;
+  height: 100%;
   background-image: url("../store/img/benu.png");
   background-position: center;
   background-size: contain;
@@ -258,8 +286,8 @@ nav {
 // Budget
 
 .img-budget {
-  width: 80%;
-  height: 60%;
+  width: 100%;
+  height: 100%;
   background-image: url("../store/img/budget.png");
   background-position: center;
   background-size: contain;
@@ -301,54 +329,55 @@ nav {
 
 //! Contact
 
-.contact {
-  .contact-image {
+.contact-card {
+  height: 80%;
+  width: 100%;
+  box-shadow: 10px 10px 10px #eee;
+
+  .contact-content {
+    width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+
+    &::before {
+      border-radius: 300px 60px 300px;
+      border: 2px solid $hl-color;
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: url("../store/img/contact.jpg") center center;
+      filter: brightness(70%);
+    }
     span {
       border-radius: 10px;
       background: #eee;
-      padding: 0.5rem;
+      padding: 0.7rem 1rem;
+      font-size: 3.5rem;
     }
+    .text {
+      z-index: 5;
+      position: absolute;
+      top: 43%;
+      left: 58%;
+      color: #eee;
+      transform: translate(-50%, -50%);
 
-    .hero {
-      height: 80%;
-      position: relative;
-      box-shadow: 10px 10px 10px #eee;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 300px 60px 300px;
-        border: 2px solid rgb(219, 219, 219);
-        filter: brightness(60%);
-      }
-      .text {
-        position: absolute;
-        top: 40%;
-        left: 60%;
+      a {
+        text-decoration: none;
         color: #eee;
-        transform: translate(-40%, -50%);
-        h1 {
-          font-size: 4rem;
-          margin-bottom: 2rem;
-        }
-      }
-
-      p {
         font-size: 2rem;
-        a {
-          margin-left: 2rem;
-          text-decoration: none;
-          font-size: 2.4rem;
-          color: $hl-color;
-          transition: all 0.2s ease;
-        }
 
-        &:hover {
-          color: tan;
+        p {
+          margin-top: 2rem;
+          transition: all 0.2s ease;
+          &:hover {
+            transform: translateY(-7px);
+            color: tan;
+          }
         }
       }
     }

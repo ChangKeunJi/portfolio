@@ -4,7 +4,7 @@ import { GoMarkGithub } from "react-icons/go";
 
 const Work = () => {
   return (
-    <div>
+    <div id="work">
       <section className="work" id="benu">
         <div className="title">Benu - HTML/CSS/SASS</div>
         <div className="card-right">

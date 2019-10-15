@@ -10,7 +10,7 @@ import {
 
 const About = () => {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <div className="card-left">
         <div className="text">
           <div className="title hl">A littel bit about me</div>

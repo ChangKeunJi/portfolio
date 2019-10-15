@@ -17,34 +17,33 @@ const Main = () => {
   const props1 = useSpring({
     transform: "translate3d(0,0,0)",
     from: {
-      transform: "translate3d(0,-800px,0)"
+      transform: "translate3d(-1800px,0,0)"
     },
-    config: { duration: 1000 }
+    config: { duration: 1500 }
   });
 
   const props2 = useSpring({
     transform: "translate3d(0,0,0)",
     from: {
-      transform: "translate3d(0,-800px,0)"
+      transform: "translate3d(-1800px,0,0)"
     },
-    config: { duration: 1200 }
+    config: { duration: 1800 }
   });
 
   const props3 = useSpring({
     transform: "translate3d(0,0,0)",
     from: {
-      transform: "translate3d(0,-800px,0)"
+      transform: "translate3d(-1800px,0,0)"
     },
-    config: { duration: 1400 }
+    config: { duration: 2100 }
   });
 
   return (
-    <section className="main">
-      <section className="main-image">
-        <div className="hero">
-          <animated.img style={props} src="./img/home3.jpg" alt="image" />
-
-          <h1 style={props2} className="main-text">
+    <section className="main" id="main">
+      <div className="main-card">
+        <div className="main-content">
+          <animated.div style={props} className="main-image"></animated.div>
+          <div style={props2} className="main-text">
             <animated.div style={props1} className="greet">
               <span className="hl">Hello,</span> Everyone !!
             </animated.div>
@@ -54,10 +53,9 @@ const Main = () => {
             <animated.div style={props3} className="title">
               <span className="hl">Front-end</span> Developer
             </animated.div>
-          </h1>
+          </div>
         </div>
-      </section>
-      <div className="slider"></div>
+      </div>
     </section>
   );
 };

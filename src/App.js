@@ -4,6 +4,7 @@ import About from "./components/About";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
 import Nav from "./utils/Nav";
+
 const App = () => {
   return (
     <div className="App">
