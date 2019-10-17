@@ -14,7 +14,11 @@ const Contact = () => {
             <a href="mailto:ckdrmsdk@gmail.com">
               <p>ckdrmsdk@gmail.com</p>
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.linkedin.com/in/chang-keun-ji-847588178/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <p>
                 Linkedin <FaLinkedin />
               </p>
