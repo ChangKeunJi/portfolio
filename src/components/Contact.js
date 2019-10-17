@@ -1,7 +1,6 @@
 import React from "react";
 import { GoMarkGithub } from "react-icons/go";
 import { FaLinkedin } from "react-icons/fa";
-import { FiChevronsUp } from "react-icons/fi";
 
 const Contact = () => {
   return (
@@ -15,14 +14,17 @@ const Contact = () => {
             <a href="mailto:ckdrmsdk@gmail.com">
               <p>ckdrmsdk@gmail.com</p>
             </a>
-
-            <a href="#">
+            <a href="#" target="_blank" rel="noopener noreferrer">
               <p>
                 Linkedin <FaLinkedin />
               </p>
             </a>
 
-            <a href="#">
+            <a
+              href="https://github.com/ChangKeunJi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <p>
                 Github <GoMarkGithub />
               </p>

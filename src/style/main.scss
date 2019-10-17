@@ -21,7 +21,7 @@ a {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
   border-bottom: 0.4px solid #000;
   display: flex;
   justify-content: center;
@@ -30,7 +30,7 @@ section {
 
 .card-left {
   width: 100%;
-  height: 80%;
+  height: 80vh;
   box-shadow: 10px 10px 10px #eee;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -42,7 +42,7 @@ section {
 
 .card-right {
   width: 100%;
-  height: 80%;
+  height: 80vh;
   box-shadow: 10px 10px 10px #eee;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -117,8 +117,10 @@ nav {
   height: 100vh;
   width: 100%;
   position: fixed;
+  z-index: 9;
+
   &.open {
-    z-index: 9;
+    z-index: 10;
   }
 }
 
@@ -128,9 +130,8 @@ nav {
   right: 10%;
   top: 8%;
   transform: translate(-12%, -19%);
-  z-index: 2;
-
   .line {
+    position: relative;
     width: 30px;
     height: 3px;
     background: #333;
@@ -227,20 +228,17 @@ nav {
     position: absolute;
     text-align: center;
     top: 5%;
-    transform: translateY(-5%);
+    left: 50%;
+    transform: translate(-50%, -5%);
     font-size: 2rem;
   }
 
   .card-right,
   .card-left {
-    // text-align: center;
     padding-top: 1rem;
 
     .description {
       padding: 7rem 3rem;
-      li {
-        list-style: none;
-      }
     }
 
     .screenshot {
@@ -251,11 +249,20 @@ nav {
       align-items: center;
       flex-direction: column;
 
+      .img {
+        border: 2px solid $hl-color;
+        margin-top: 6rem;
+        height: 220px;
+        width: 450px;
+      }
+
       .buttons {
+        margin-top: 2rem;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-around;
+        z-index: 9;
 
         a {
           text-decoration: none;
@@ -279,7 +286,7 @@ nav {
   height: 100%;
   background-image: url("../store/img/benu.png");
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -290,18 +297,18 @@ nav {
   height: 100%;
   background-image: url("../store/img/budget.png");
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 // myTap
 
 .img-myTab {
-  width: 80%;
-  height: 60%;
+  width: 100%;
+  height: 100%;
   background-image: url("../store/img/myTab.png");
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -312,7 +319,7 @@ nav {
   height: 60%;
   background-image: url("../store/img/hotspur.png");
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -323,62 +330,157 @@ nav {
   height: 60%;
   background-image: url("../store/img/portfol.png");
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 //! Contact
 
-.contact-card {
-  height: 80%;
-  width: 100%;
-  box-shadow: 10px 10px 10px #eee;
-
-  .contact-content {
+.contact {
+  height: 100vh !important;
+  .contact-card {
+    height: 80%;
     width: 100%;
-    height: 100%;
-    position: relative;
+    box-shadow: 10px 10px 10px #eee;
 
-    &::before {
-      border-radius: 300px 60px 300px;
-      border: 2px solid $hl-color;
-      content: "";
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: url("../store/img/contact.jpg") center center;
-      filter: brightness(70%);
-    }
-    span {
-      border-radius: 10px;
-      background: #eee;
-      padding: 0.7rem 1rem;
-      font-size: 3.5rem;
-    }
-    .text {
-      z-index: 5;
-      position: absolute;
-      top: 43%;
-      left: 58%;
-      color: #eee;
-      transform: translate(-50%, -50%);
+    .contact-content {
+      width: 100%;
+      height: 100%;
+      position: relative;
 
-      a {
-        text-decoration: none;
+      &::before {
+        border-radius: 300px 60px 300px;
+        border: 2px solid $hl-color;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: url("../store/img/contact.jpg") center center;
+        filter: brightness(70%);
+      }
+      span {
+        border-radius: 10px;
+        background: #eee;
+        padding: 0.7rem 1rem;
+        font-size: 3.5rem;
+      }
+      .text {
+        z-index: 9;
+        position: absolute;
+        top: 43%;
+        left: 58%;
         color: #eee;
-        font-size: 2rem;
+        transform: translate(-50%, -50%);
 
-        p {
-          margin-top: 2rem;
-          transition: all 0.2s ease;
-          &:hover {
-            transform: translateY(-7px);
-            color: tan;
+        a {
+          text-decoration: none;
+          color: #eee;
+          font-size: 2rem;
+
+          p {
+            margin-top: 2rem;
+            transition: all 0.2s ease;
+            &:hover {
+              transform: translateY(-7px);
+              color: tan;
+            }
           }
         }
+      }
+    }
+  }
+}
+
+//! Media querie
+
+@media (max-width: 994px) {
+  section {
+    padding: 3rem 0;
+    // margin-top: 3rem;
+  }
+
+  //! Main
+  .main {
+    .main-image {
+      &::before {
+        border-radius: 60px 200px 60px !important;
+      }
+    }
+    .main-text {
+      left: 50% !important;
+      top: 51% !important;
+      transform: translate(-50%, -50%) !important;
+    }
+  }
+
+  //! About
+  .about {
+    .card-left {
+      text-align: center;
+      height: auto !important;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 3rem;
+      overflow-x: hidden;
+
+      .title {
+        margin: 1rem 0;
+      }
+    }
+  }
+
+  //! Work
+
+  .work {
+    .title {
+      margin-top: 2rem;
+      position: absolute;
+      top: 0%;
+      padding: 1rem 5rem;
+    }
+
+    .card-left,
+    .card-right {
+      border-radius: 60px 150px 60px !important;
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      overflow-y: hidden;
+      overflow-x: hidden;
+      text-align: center;
+      .description {
+        padding-bottom: 0 !important;
+      }
+
+      .img {
+        margin: 0 !important;
+      }
+
+      .screenshot {
+        margin: 1rem auto;
+      }
+    }
+  }
+
+  //! Contact
+
+  .contact {
+    .contact-content {
+      &::before {
+        border-radius: 200px 60px 200px !important;
+      }
+    }
+    .text {
+      width: 60vw;
+      left: 50% !important;
+      top: 60% !important;
+      transform: translate(-50%, -60%) !important;
+
+      .hl {
+        font-size: 2rem !important;
       }
     }
   }
