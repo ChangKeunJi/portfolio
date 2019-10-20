@@ -38,7 +38,7 @@ class Nav extends Component {
             offset={0}
             duration={1000}
           >
-            Home
+            home
           </Link>
           <Link
             className="nav-item"
@@ -50,7 +50,7 @@ class Nav extends Component {
             offset={0}
             duration={1000}
           >
-            About
+            about
           </Link>
           <Link
             className="nav-item"

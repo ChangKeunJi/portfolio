@@ -23,7 +23,6 @@ a {
 
 section {
   min-height: 100vh;
-  border-bottom: 0.4px solid #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -395,12 +394,13 @@ nav {
   }
 }
 
+//845
+
 //! Media querie
 
 @media (max-width: 994px) {
   section {
     padding: 3rem 0;
-    // margin-top: 3rem;
   }
 
   //! Main
@@ -414,6 +414,7 @@ nav {
       left: 50% !important;
       top: 51% !important;
       transform: translate(-50%, -50%) !important;
+      font-size: 2rem !important;
     }
   }
 
@@ -429,6 +430,7 @@ nav {
 
       .title {
         margin: 1rem 0;
+        font-size: 1.3rem;
       }
     }
   }
@@ -474,15 +476,18 @@ nav {
         border-radius: 200px 60px 200px !important;
       }
     }
+
     .text {
       width: 60vw;
       left: 50% !important;
       top: 60% !important;
       transform: translate(-50%, -60%) !important;
-
-      .hl {
-        font-size: 2rem !important;
+      a {
+        font-size: 1.5rem !important;
       }
+    }
+    .hl {
+      font-size: 1.5rem !important;
     }
   }
 }
