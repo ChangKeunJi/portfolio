@@ -394,8 +394,6 @@ nav {
   }
 }
 
-//845
-
 //! Media querie
 
 @media (max-width: 994px) {
@@ -454,8 +452,20 @@ nav {
       overflow-y: hidden;
       overflow-x: hidden;
       text-align: center;
+
+      .title {
+        font-size: 1.4rem !important;
+      }
       .description {
         padding-bottom: 0 !important;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: space-evenly !important;
+        a {
+          font-size: 1.3rem !important;
+        }
       }
 
       .img {
