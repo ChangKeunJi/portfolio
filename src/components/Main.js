@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "../style/main.scss";
 import { useSpring, animated } from "react-spring";
 
@@ -48,10 +48,10 @@ const Main = () => {
               <span className="hl">Hello,</span> Everyone !!
             </animated.div>
             <animated.div style={props2} className="name">
-              I'm <span className="hl">ChangKeun</span> Ji
+              I'm <span className="hl">ChangKeun</span> Ji,
             </animated.div>
             <animated.div style={props3} className="title">
-              <span className="hl">Front-end</span> Developer
+              A <span className="hl">Front-end</span> Developer
             </animated.div>
           </div>
         </div>

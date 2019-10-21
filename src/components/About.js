@@ -16,7 +16,7 @@ const About = () => {
           <div className="title hl">A littel bit about me</div>
           <p>Hello again, I'm Changkeun from Korea.</p>
           <p>
-            I happe to come across programming in January 2019. After that
+            I happen to come across programming in January 2019. After that
             moment, I've been teaching myself coding and now It has become my
             obsession.
           </p>
@@ -26,7 +26,7 @@ const About = () => {
           </p>
           <p>
             That's why I'm fascinated with coding and keep trying to be better
-            and overcoming the challenging problems.
+            and learn new things consistently.
           </p>
         </div>
         <div className="lang">

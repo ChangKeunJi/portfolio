@@ -11,8 +11,8 @@ const Contact = () => {
             <h1>
               <span className="hl">Contact Me </span>
             </h1>
-            <a href="mailto:ckdrmsdk@gmail.com">
-              <p>ckdrmsdk@gmail.com</p>
+            <a href="mailto:changkeun.j@gmail.com">
+              <p>changkeun.j@gmail.com</p>
             </a>
             <a
               href="https://www.linkedin.com/in/chang-keun-ji-847588178/"
