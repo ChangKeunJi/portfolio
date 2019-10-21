@@ -16,17 +16,17 @@ const About = () => {
           <div className="title hl">A littel bit about me</div>
           <p>Hello again, I'm Changkeun from Korea.</p>
           <p>
-            I happend to come across programming at January 2019. After that
+            I happe to come across programming in January 2019. After that
             moment, I've been teaching myself coding and now It has become my
             obsession.
           </p>
           <p>
-            I believe in the power of software and beautiful design that make
-            people life more variety and give beautiful impact.
+            I believe in the power of software and beautiful design that makes
+            people's lives more variety and give a beautiful impact.
           </p>
           <p>
-            That's why I'm fascinated by coding and keep trying to be better and
-            overcoming challenging problem.
+            That's why I'm fascinated with coding and keep trying to be better
+            and overcoming the challenging problems.
           </p>
         </div>
         <div className="lang">
