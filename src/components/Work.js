@@ -9,7 +9,7 @@ const Work = () => {
         <div className="card-right">
           <div className="title">Benu - HTML/Javascript/SASS</div>
           <div className="description">
-            <p>I rebuilded this michellin 3-star restaurant's website.</p>
+            <p>I rebuilt this michellin 3-star restaurant's website.</p>
             <p>Since chef Corey Lee was one of my favorite chef,</p>
             <p>I decided to make my own version of it.</p>
             <p>

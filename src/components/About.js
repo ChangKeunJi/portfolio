@@ -22,7 +22,7 @@ const About = () => {
           </p>
           <p>
             I believe in the power of software and beautiful design that makes
-            people's lives more variety and give a beautiful impact.
+            people's lives more variety and give a meaningful impact.
           </p>
           <p>
             That's why I'm fascinated with coding and keep trying to be better
@@ -35,6 +35,12 @@ const About = () => {
             <div className="icons">
               <ul>
                 <li>
+                  <FaJsSquare />
+                </li>
+                <li>
+                  <FaReact />
+                </li>
+                <li>
                   <FaHtml5 />
                 </li>
                 <li>
@@ -44,23 +50,17 @@ const About = () => {
                   <FaSass />
                 </li>
                 <li>
-                  <FaJsSquare />
-                </li>
-                <li>
-                  <FaReact />
-                </li>
-                <li>
                   <FaNpm />
                 </li>
               </ul>
             </div>
             <div className="list">
               <ul>
+                <li>Javascript</li>
+                <li>React & Redux</li>
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>Sass</li>
-                <li>Javascript</li>
-                <li>React & Redux</li>
                 <li>Npm</li>
               </ul>
             </div>

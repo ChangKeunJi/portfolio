@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-scroll";
+import { GoMarkGithub } from "react-icons/go";
+import { FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 class Nav extends Component {
   state = {
@@ -23,6 +26,27 @@ class Nav extends Component {
           <div className="line"></div>
           <div className="line"></div>
           <div className="line"></div>
+        </div>
+        <div className="nav-icon">
+          <a
+            href="https://www.linkedin.com/in/chang-keun-ji-847588178/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin />
+          </a>
+          <br />
+          <a
+            href="https://github.com/ChangKeunJi/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GoMarkGithub />
+          </a>
+          <br />
+          <a href="mailto:changkeun.j@gmail.com">
+            <MdEmail />
+          </a>
         </div>
         <ul
           onClick={this.handleClick}
