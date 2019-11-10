@@ -78,7 +78,7 @@ const Work = () => {
 
       <section className="work">
         <div className="card-right">
-          <div className="title">My Tap - Javascript/Firestore/Sass</div>
+          <div className="title">My Tab - Javascript/Firestore/Sass</div>
           <div className="description">
             <p>This app is inspired by momentum which is chrome extension.</p>
             <p>
